@@ -3,12 +3,33 @@
   <head>
     <title>Nameofapp</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Há vida no campo</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contacts</a></li> 
+        </ul>
+      </div>
+    </nav>
+
+    <Div class="container content">
+      <%= yield %>
+    </Div>
+    
+    <footer>
+      &copy; 2015 Ha vida no Campo
+    </footer>
   </body>
 </html>
