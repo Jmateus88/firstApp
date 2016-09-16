@@ -2,8 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  
+  margin-bottom: 60px;
+}
+
 h1{
 	color: #ff0080;
+	text-align: center;
+}
+
+h3{
+	text-align: center;
 }
 
 .content{
@@ -27,4 +42,18 @@ h1{
 
 .navbar-inverse .navbar-nav>li>a {
     color: #ff0080;
+}
+
+.style-image{
+	display: block;
+    margin: 15px auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ccf2ff;
 }
