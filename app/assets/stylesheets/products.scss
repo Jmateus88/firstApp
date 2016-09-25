@@ -5,3 +5,29 @@
 table{
 	color:#ff0080;
 }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.product{
+	border:1px solid grey;
+	padding: 15px;
+	text-align:center;
+	margin:15px;
+	
+}
+
+.product img {
+    border: 1px grey;
+    display: block;
+    margin: 0 auto;
+}
+
