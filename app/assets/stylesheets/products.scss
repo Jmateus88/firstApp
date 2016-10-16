@@ -26,8 +26,14 @@ table{
 }
 
 .product img {
-    border: 1px grey;
-    display: block;
-    margin: 0 auto;
+  border: 1px grey;
+  display: block;
+  margin: 0 auto;
 }
 
+.product-container{
+  border: 1px grey solid;
+  padding: 10px;
+  text-align:center;
+  margin:10px;
+}
