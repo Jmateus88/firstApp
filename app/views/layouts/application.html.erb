@@ -33,7 +33,7 @@
                 
                 <%= text_field_tag(:q, nil, class: 'form-control') %>
                 <%= submit_tag("Search") %>
-              <% end %>   
+              <% end %>
             </li>
           </ul>
           <ul class="nav pull-right">
@@ -48,11 +48,18 @@
         </div>
       </div>
     </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
     <Div class="container content">
       <%= yield %>
     </Div>
+    <div class="alert-message-box">
+      <% if notice %>
+        <p id="notice" class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p id="alert" class="alert alert-info"><%= alert %></p>
+      <% end %>
+    </div>
     <footer class="footer">
       <div class="container">
         <p class="text-muted">&copy; 2015 Ha vida no Campo</p>
