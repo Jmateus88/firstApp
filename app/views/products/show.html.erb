@@ -60,6 +60,7 @@
 					  <strong>Comment</strong>	
 					  <%= @product.highest_rating_comment %>
 					</p>	
+					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 				</div>
 
 
@@ -67,9 +68,12 @@
 					<%= link_to 'Edit', edit_product_path(@product) %>
 					<%= link_to 'Back', products_path %>
 				</div>
+
+
 			</div>	
 		</div>
 	</div>
+
 
 	
 
