@@ -13,4 +13,12 @@ class Product < ApplicationRecord
 	def average_rating
   		comments.average(:rating).to_f
 	end
+
+
+	validates :description, presence: true
+	validates :name, presence: true
+	validates :price, presence: true
+	validates :colour, presence: true
+	validates :image_url, presence: true
+
 end
