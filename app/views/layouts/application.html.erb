@@ -20,11 +20,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Há vida no campo</a>
+            <a class="navbar-brand" href="/static_pages/index">Há vida no campo</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/static_pages/index">Home</a></li>
+    <!--    <li><a href="/static_pages/index">Home</a></li> -->
+            <li><a href="/static_pages/landing_page">Best sellers</a></li>
             <li><a href="/products">Products</a></li>
             <li><a href="/static_pages/about">About</a></li>
             <li><a href="/static_pages/contact">Contacts</a></li> 
@@ -35,8 +36,6 @@
                 <%= submit_tag("Search") %>
               <% end %>
             </li>
-          </ul>
-          <ul class="nav pull-right">
             <li>
               <% if user_signed_in? %>
               <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -44,7 +43,7 @@
               <%= link_to('Login', new_user_session_path) %>
               <% end %>
             </li>
-          </ul>
+          </ul>                   
         </div>
       </div>
     </nav>
@@ -52,14 +51,18 @@
     <Div class="container content">
       <%= yield %>
     </Div>
-    <div class="alert-message-box">
-      <% if notice %>
+    <!-- Alert box -->
+    <% if notice %>
+      <div class="alert-message-box">
         <p id="notice" class="alert alert-info"><%= notice %></p>
-      <% end %>
-      <% if alert %>
+      </div>  
+    <% end %>
+    <% if alert %>
+      <div class="alert-message-box">
         <p id="alert" class="alert alert-info"><%= alert %></p>
-      <% end %>
-    </div>
+      </div>
+    <% end %> <!-- end of alert box -->
+    
     <footer class="footer">
       <div class="container">
         <p class="text-muted">&copy; 2015 Ha vida no Campo</p>
