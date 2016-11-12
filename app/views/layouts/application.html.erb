@@ -20,20 +20,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/static_pages/index">Há vida no campo</a>
+            <%= link_to('Há vida no campo', static_pages_index_path, :class => "navbar-brand") %>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-    <!--    <li><a href="/static_pages/index">Home</a></li> -->
-            <li><a href="/static_pages/landing_page">Best sellers</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/static_pages/about">About</a></li>
-            <li><a href="/static_pages/contact">Contacts</a></li> 
+            <li><%= link_to('Best sellers', static_pages_landing_page_path) %></li>
+            <li><%= link_to('Products', products_path) %></li>
+            <li><%= link_to('About', static_pages_about_path) %></li>
+            <li><%= link_to('Contacts', static_pages_contact_path) %></li> 
             <li>
               <%= form_tag("/products", method: "get", class: 'navbar-form') do %>
                 
                 <%= text_field_tag(:q, nil, class: 'form-control') %>
-                <%= submit_tag("Search") %>
+                <%= submit_tag "Search",:class => "btn btn-default" %>
               <% end %>
             </li>
             <li>
