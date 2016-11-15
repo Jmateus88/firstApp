@@ -46,21 +46,22 @@
         </div>
       </div>
     </nav>
+
+    
     
     <Div class="container content">
+      <!-- Alert box -->
+      <div class="alert-message-box">
+        <% if notice %>
+          <p id="notice" class="alert alert-info"><%= notice %></p> 
+        <% end %>
+        <% if alert %>
+          <p id="alert" class="alert alert-info"><%= alert %></p>
+        <% end %> <!-- end of alert box -->
+      </Div>  
       <%= yield %>
     </Div>
-    <!-- Alert box -->
-    <% if notice %>
-      <div class="alert-message-box">
-        <p id="notice" class="alert alert-info"><%= notice %></p>
-      </div>  
-    <% end %>
-    <% if alert %>
-      <div class="alert-message-box">
-        <p id="alert" class="alert alert-info"><%= alert %></p>
-      </div>
-    <% end %> <!-- end of alert box -->
+    
     
     <footer class="footer">
       <div class="container">
