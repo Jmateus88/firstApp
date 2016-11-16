@@ -1,82 +1,56 @@
 <p id="notice"><%= notice %></p>
-
-<div class="container product-page">
-	
-	<div class="row">
-		<div class="col-md-6">
-	  		<img src="<%= @product.image_url %>" class="img-responsive"> 	
-		</div>
-
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>
-			  			<strong>Name:</strong>
-			  			<%= @product.name %>
-					</h1>
-				</div>
-			
-
-			
-				<div class="col-md-12">
-					<p>
-					  <strong>Price:</strong>
-					  <%= @product.price %>€
-					</p>
-				</div>
-			
-			
-			
-			
-				<div class="col-md-12">
-					<p>
-					  <strong>Description:</strong>
-					  <%= @product.description %>
-					</p>
-				</div>
-			
-
-			
-				<div class="col-md-12">
-					<p>
-					  <strong>Colour:</strong>
-					  <%= @product.colour %>
-					</p>
-				</div>
-			
-				<div class="col-md-12">
-					<p>
-					  <strong>Comment</strong>	
-					  <%= @product.highest_rating_comment %>
-					</p>	
-					<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-				</div>
-
-
-				<div class="col-md-12">
-					<%= link_to 'Edit', edit_product_path(@product) %>
-					<%= link_to 'Back', products_path %>
-				</div>
-
-			</div>	
-		</div>
-
+<div class="product-page">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-6">
+		  		<img src="<%= @product.image_url %>" class="img-responsive"> 	
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>
+				  			<strong>Name:</strong>
+				  			<%= @product.name %>
+						</h1>
+					
+						<p>
+						  <strong>Price:</strong>
+						  <%= @product.price %>€
+						</p>
+					
+						<p>
+						  <strong>Description:</strong>
+						  <%= @product.description %>
+						</p>
+					
+						<p>
+						  <strong>Colour:</strong>
+						  <%= @product.colour %>
+						</p>
+						<p>Average Rating:</p>
+						<div class="rated" data-score="<%= @product.average_rating %>"></div> 
+						<br>
+						<%= link_to 'Edit', edit_product_path(@product) %>
+						<%= link_to 'Back', products_path %>
+					</div>
+
+				</div>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
 				<%= render partial: 'new_comment' %> 
 			</div>
 
-			<div class="col-md-12">
+			<div class="col-md-6">
 				<%= render partial: 'comments' %>
+				<%=	will_paginate @comments %>
 			</div>
-			<%=	will_paginate @comments %>
 		</div>
-	</div>
-
-
-	
-
-	
+		
+		
+	</div>	
 </div>
+
 
 

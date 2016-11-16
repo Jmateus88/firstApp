@@ -1,7 +1,9 @@
 <div class="product-reviews">
     <% @comments.each do |comment| %>
         <hr>
-        <p><%= comment.user.first_name %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small><br></p>
+        <p><%= comment.user %><small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %>
+        <!-- was comment.user.first_name --> 
+        </em></small><br></p>
         <br>
     <!--    <p><%= "Rating: #{comment.rating}/5 " %></p> -->
         <p><%= comment.body %></p>
