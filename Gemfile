@@ -43,6 +43,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
 
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -62,4 +64,7 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'rails-controller-testing'
+
+gem "factory_girl_rails", "~> 4.0"
+
 
