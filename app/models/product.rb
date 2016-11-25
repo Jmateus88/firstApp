@@ -17,7 +17,7 @@ class Product < ApplicationRecord
 
 	validates :description, presence: true
 	validates :name, presence: true
-	validates :price, presence: true
+	validates :price, presence: true, :with => /^\d+\.*\d{0,2}$/
 	validates :colour, presence: true
 	validates :image_url, presence: true
 
