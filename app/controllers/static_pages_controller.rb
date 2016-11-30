@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def landing_page
+    byebug
     @featured_product = Product.first
     @products = Product.all
   end
