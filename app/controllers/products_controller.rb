@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    byebug
     if params[:q]
       search_term = params[:q].downcase
       @products = Product.where("name LIKE ?", "%#{search_term}%")
