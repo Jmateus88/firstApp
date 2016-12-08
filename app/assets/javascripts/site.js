@@ -3,7 +3,16 @@ $(document).on('turbolinks:load', function(){
     $('.rated').raty({ path: '/assets',
       readOnly: true,
       score: function() {
-        return $(this).attr('data-score');
-      }
-    });
+      return $(this).attr('data-score');
+       }
+ 	  });
+    $('.img-zoom').elevateZoom(
+    	{
+    	zoomType: "inner",
+  		cursor: "crosshair",
+  		easing : true
+    	}
+    );
 });
+
+
