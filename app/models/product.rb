@@ -14,6 +14,10 @@ class Product < ApplicationRecord
   		comments.average(:rating).to_f
 	end
 
+	def cache_average_rating
+
+	end
+
 
 	validates :description, presence: true
 	validates :name, presence: true
